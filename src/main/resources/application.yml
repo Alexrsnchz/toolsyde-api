@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: toolsyde
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pgdb
+    driver-class-name: org.postgresql.Driver
+    username: user
+    password: user
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
