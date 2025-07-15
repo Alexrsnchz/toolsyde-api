@@ -1,7 +1,9 @@
 package com.colaborator.toolsyde;
 
 import com.colaborator.toolsyde.model.Category;
+import com.colaborator.toolsyde.model.Tool;
 import com.colaborator.toolsyde.repository.CategoryRepository;
+import com.colaborator.toolsyde.repository.ToolRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,18 +17,18 @@ public class ToolsydeApplication {
 	}
 
 	@Bean
-	public CommandLineRunner loadCategories(CategoryRepository repository) {
+	public CommandLineRunner loadCategories(CategoryRepository categoryRepository, ToolRepository toolRepository) {
 		return args -> {
 
-			repository.save(Category.builder()
+			Category generators = categoryRepository.save(Category.builder()
 					.title("Generators")
 					.description("Tools that automatically generate content or code.")
-					.slug("generator")
+					.slug("generators")
 					.color("#fca5a5")
 					.isNew(true)
 					.build());
 
-			repository.save(Category.builder()
+			Category validators = categoryRepository.save(Category.builder()
 					.title("Validators")
 					.description("Apps and services to validate data or formats.")
 					.slug("validators")
@@ -34,7 +36,7 @@ public class ToolsydeApplication {
 					.isNew(false)
 					.build());
 
-			repository.save(Category.builder()
+			Category converters = categoryRepository.save(Category.builder()
 					.title("Converters")
 					.description("Tools to convert formats or data structures.")
 					.slug("converters")
@@ -42,7 +44,7 @@ public class ToolsydeApplication {
 					.isNew(true)
 					.build());
 
-			repository.save(Category.builder()
+			Category uiTools = categoryRepository.save(Category.builder()
 					.title("UI Tools")
 					.description("Utilities to improve UI and design workflows.")
 					.slug("ui-tools")
@@ -50,12 +52,84 @@ public class ToolsydeApplication {
 					.isNew(true)
 					.build());
 
-			repository.save(Category.builder()
+			Category resources = categoryRepository.save(Category.builder()
 					.title("Resources")
 					.description("A collection of useful resources for developers and designers.")
 					.slug("resources")
 					.color("#fdba74")
 					.isNew(true)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("Readme Generator")
+					.description("Create a markdown file with the information of your project.")
+					.slug("readme-generator")
+					.uses(0)
+					.category(generators)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("Gitignore Generator")
+					.description("Create customizable license keys for software products.")
+					.slug("gitignore-generator")
+					.uses(0)
+					.category(generators)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("License Picker")
+					.description("Create customizable license keys for software products.")
+					.slug("license-picker")
+					.uses(0)
+					.category(generators)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("QR Code Generator")
+					.description("Create customizable QR codes for URLs, text, WiFi, and more.")
+					.slug("qr-code")
+					.uses(0)
+					.category(generators)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("Mock Data Generator")
+					.description("Generate diverse fake data for testing applications.")
+					.slug("mock-data-generator")
+					.uses(0)
+					.category(generators)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("Regex Tester")
+					.description("Test and validate regular expressions with real-time matching.")
+					.slug("regex-tester")
+					.uses(0)
+					.category(validators)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("Color Picker")
+					.description("Select and copy color values easily using an intuitive color wheel or palette.")
+					.slug("color-picker")
+					.uses(0)
+					.category(uiTools)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("Gradient Generator")
+					.description("Create smooth CSS gradients with customizable directions and color stops.")
+					.slug("gradient-generator")
+					.uses(0)
+					.category(uiTools)
+					.build());
+
+			toolRepository.save(Tool.builder()
+					.title("JSON Formatter")
+					.description("Format and validate JSON data for easier readability and debugging.")
+					.slug("json-formatter")
+					.uses(0)
+					.category(resources)
 					.build());
 		};
 	}
