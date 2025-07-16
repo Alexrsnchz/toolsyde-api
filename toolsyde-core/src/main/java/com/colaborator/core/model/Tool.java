@@ -1,33 +1,29 @@
-package com.colaborator.toolsyde.model;
+package com.colaborator.core.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "categories")
-public class Category {
+@Table(name = "tools")
+public class Tool {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String title;
-    private String description;
     private String slug;
-    private String color;
-    private Boolean isNew;
+    private String description;
+    private int uses;
 
-    @OneToMany(mappedBy = "category")
-    @JsonIgnore
-    private List<Tool> tools;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 }

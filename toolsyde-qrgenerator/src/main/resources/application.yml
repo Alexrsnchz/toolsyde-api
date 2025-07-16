@@ -1,12 +1,12 @@
 spring:
   application:
-    name: toolsyde-core
+    name: toolsyde-generator
 
   datasource:
     url: jdbc:postgresql://localhost:5432/pgdb
     driver-class-name: org.postgresql.Driver
-    username:
-    password:
+    username: user
+    password: user
 
   jpa:
     hibernate:

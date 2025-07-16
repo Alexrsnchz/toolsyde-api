@@ -14,9 +14,9 @@
     </parent>
 
     <!-- Microservice Info -->
-    <artifactId>toolsyde-core</artifactId>
-    <name>Core</name>
-    <description>Toolsyde Core</description>
+    <artifactId>toolsyde-qrgenerator</artifactId>
+    <name>QR Generator</name>
+    <description>Toolsyde QR Generator</description>
 
     <!-- Dependencies -->
     <dependencies>

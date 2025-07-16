@@ -1,10 +1,10 @@
-package com.colaborator.toolsyde;
+package com.colaborator.qrgenerator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ToolsydeApplicationTests {
+class QrgeneratorApplicationTests {
 
 	@Test
 	void contextLoads() {

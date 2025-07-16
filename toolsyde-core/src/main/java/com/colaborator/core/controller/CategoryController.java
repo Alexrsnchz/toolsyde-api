@@ -1,7 +1,7 @@
-package com.colaborator.toolsyde.controller;
+package com.colaborator.core.controller;
 
-import com.colaborator.toolsyde.model.Category;
-import com.colaborator.toolsyde.repository.CategoryRepository;
+import com.colaborator.core.model.Category;
+import com.colaborator.core.repository.CategoryRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,7 +1,7 @@
-package com.colaborator.toolsyde.controller;
+package com.colaborator.core.controller;
 
-import com.colaborator.toolsyde.model.Tool;
-import com.colaborator.toolsyde.repository.ToolRepository;
+import com.colaborator.core.model.Tool;
+import com.colaborator.core.repository.ToolRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

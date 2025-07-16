@@ -1,19 +1,19 @@
-package com.colaborator.toolsyde;
+package com.colaborator.core;
 
-import com.colaborator.toolsyde.model.Category;
-import com.colaborator.toolsyde.model.Tool;
-import com.colaborator.toolsyde.repository.CategoryRepository;
-import com.colaborator.toolsyde.repository.ToolRepository;
+import com.colaborator.core.model.Category;
+import com.colaborator.core.model.Tool;
+import com.colaborator.core.repository.CategoryRepository;
+import com.colaborator.core.repository.ToolRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class ToolsydeApplication {
+public class CoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ToolsydeApplication.class, args);
+		SpringApplication.run(CoreApplication.class, args);
 	}
 
 	@Bean
