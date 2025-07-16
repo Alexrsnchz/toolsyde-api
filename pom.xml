@@ -16,6 +16,7 @@
 
     <!-- Microservices -->
     <modules>
+        <module>shared-libs</module>
         <module>toolsyde-core</module>
         <module>toolsyde-qrgenerator</module>
     </modules>
