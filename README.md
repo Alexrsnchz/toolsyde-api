@@ -7,6 +7,7 @@ A RESTful API built with Spring Boot for Toolsyde. It follows a microservices ar
 
 - Microservices structure.
 - MVC Arquitecture.
+- RESTful API.
 
 ## 💻 Tech Stack
 
